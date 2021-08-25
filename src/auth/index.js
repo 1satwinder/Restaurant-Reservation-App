@@ -6,3 +6,6 @@ export { EmailConfirmationLanderPage } from './EmailConfirmationLanderPage';
 export { SignInForm } from './SignInForm';
 export { SignInPage } from './SignInPage';
 export { SignOutButton } from './SignOutButton';
+export {useAuth} from './useAuth';
+export {ProtectedRoute} from './ProtectedRoute';
+export {getCurrentUser} from './getCurrentUser';
