@@ -53,7 +53,6 @@ export const SignInForm = () => {
         } catch(e){
             setErrorMessage(e.message);
         }
-
     }
     const onSignInWithGoogleClicked = async () => {
         

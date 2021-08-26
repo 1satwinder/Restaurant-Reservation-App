@@ -1,6 +1,5 @@
 import React from 'react';
 import { LanderPage } from '../ui';
-
 /*
     This component is shown after a user successfully submits
     a review for a restaurant.
