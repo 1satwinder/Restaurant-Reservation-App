@@ -1,6 +1,7 @@
 {
   "name": "firebase-demo-app-starter",
   "version": "0.1.0",
+  "proxy": "https://us-central1-restaurant-reservations-3aa56.cloudfunctions.net/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "4.9.14",
@@ -24,9 +25,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "functions:build": "npm run build --prefix ./function",
-    "functions:deploy": "npm run functions:build && firebase deploy --only functions"
+    "functions:build": "npm run build --prefix ./functions",
+    "functions:deploy": "npm run functions:build && firebase deploy --only functions",
+    "functions:watch": "nodemon --watch ./functions --ignore ./functions/build --exec \"npm run functions:build\"",
+    "functions:dev": "concurrently \"npm run functions:watch\" \"firebase emulators:start --only functions\""
   },
+  
   "eslintConfig": {
     "extends": "react-app"
   },

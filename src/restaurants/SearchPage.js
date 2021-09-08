@@ -9,6 +9,8 @@ import {
     TextInput,
 } from '../ui';
 import { RestaurantListItem } from './RestaurantListItem';
+import { getRecommendations } from './getRecommendations';
+import { searchRestaurants } from './searchRestaurants';
 
 const SearchSection = styled.div`
     align-content: center;
@@ -37,11 +39,21 @@ export const SearchPage = () => {
     }
 
     useEffect(() => {
-        // Firebase code for loading initial recommendations goes here
+        const loadRecommendations = async () => {
+            const results = await getRecommendations();
+            setRecommendations(results);
+        }
+
+        loadRecommendations();
     }, []);
 
     useEffect(() => {
-        // Firebase code for loading search results goes here
+        const loadSearchResults = async () => {
+            const results = await searchRestaurants(searchString);
+            setSearchResults(results);
+        }
+
+        loadSearchResults();
     }, [searchString]);
     
     return (
