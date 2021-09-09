@@ -9,6 +9,7 @@ import {
     TextInput,
 } from '../ui';
 import {signIn} from './signIn';
+import {signInWithGoogle} from './signInWithGoogle';
 import { ResetPasswordForm } from './ResetPasswordForm';
 
 const Form = styled.div`
@@ -55,6 +56,8 @@ export const SignInForm = () => {
         }
     }
     const onSignInWithGoogleClicked = async () => {
+        await signInWithGoogle();
+        history.push('/');
         
     }
 
