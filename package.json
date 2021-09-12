@@ -18,7 +18,8 @@
     "react-modal": "3.11.2",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "styled-components": "5.1.0"
+    "styled-components": "5.1.0",
+    "uuid": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,7 +31,6 @@
     "functions:watch": "nodemon --watch ./functions --ignore ./functions/build --exec \"npm run functions:build\"",
     "functions:dev": "concurrently \"npm run functions:watch\" \"firebase emulators:start --only functions\""
   },
-  
   "eslintConfig": {
     "extends": "react-app"
   },
